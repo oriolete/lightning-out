@@ -10,22 +10,23 @@
 ...
 <h1>Hello!</h1>
 ...
-<div id="lightning"></div>
+<div id="lightningLocator"></div>
 <script src="https://playful-fox-o26ov9-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-     $Lightning.use("c:LightOutApp", function() {
-        $Lightning.createComponent("c:expenses", {
-                objectName: "Expense__c",
-                authToken: "3MVG9Ve.2wqUVx_Z3nFMx_ytwdm0WnBAnowDB1mvO.d6trt4DDAipWp7tno3.lNL2YWT.jj0h0MHoxKTObe3D"
-              "lightning",
-              function(cmp) {
-                console.log("component was created");
-                // do some stuff
-              }
-          );
+    $Lightning.use("c:LightOutApp",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:expenses", // top-level component of your app
+                {authToken: "3MVG9Ve.2wqUVx_Z3nFMx_ytwdm0WnBAnowDB1mvO.d6trt4DDAipWp7tno3.lNL2YWT.jj0h0MHoxKTObe3D"},                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                    console.log("LApp was created")
+                }
+            );
         },
-       'https://playful-fox-o26ov9-dev-ed.lightning.force.com/'
-      );
+        'https://playful-fox-o26ov9-dev-ed.lightning.force.com/'
+    );
 </script>
 ...
 </body>
