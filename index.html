@@ -13,9 +13,8 @@
 <script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
 <script>
      $Lightning.use("c:LightOutApp", function() {
-        $Lightning.createComponent("c:expenses", {
-            	objectName: "Contact"
-            },
+        $Lightning.createComponent("c:expenses",
+                                   {},
               "lightning",
               function(cmp) {
                 console.log("LWC component was created");
