@@ -14,7 +14,7 @@
 <script>
      $Lightning.use("c:LightOutApp", function() {
         $Lightning.createComponent("c:expenses",
-                                   {},
+                                   {objectName: "Expense__c"},
               "lightning",
               function(cmp) {
                 console.log("LWC component was created");
