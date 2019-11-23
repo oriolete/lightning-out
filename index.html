@@ -10,19 +10,21 @@
 ...
      <h2>JS:</h2>
 <div id="lightning"></div>
-<script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
+<div id="lightning"></div>
+<script src="https://edf-communities-developer-edition.eu25.force.com/mycommunity/lightning/lightning.out.js"></script>
 <script>
      $Lightning.use("c:LightOutApp", function() {
-        $Lightning.createComponent("c:expenses",
-                                   {},
+        $Lightning.createComponent("c:expenses", {
+            	
+            },
               "lightning",
               function(cmp) {
-                console.log("LWC component was created");
+                console.log("Aura component was created");
                 // do some stuff
               }
           );
         },
-       'https://edf-communities-developer-edition.eu25.force.com'
+       'https://edf-communities-developer-edition.eu25.force.com/mycommunity'
       );
 </script>
 ...
