@@ -1,1 +1,31 @@
-
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Titre de la page</title>
+</head>
+<body>
+...
+<h1>Hello!</h1>
+...
+<h2>My component</h2>
+<div id="lightning"></div>
+<script src="https://fake-community-developer-edition.eu32.force.com/community01/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:LightOutApp", function() {
+        $Lightning.createComponent("c:expenses", {
+            	
+            },
+              "lightning",
+              function(cmp) {
+                console.log("Aura component was created");
+                // do some stuff
+              }
+          );
+        },
+       'https://fake-community-developer-edition.eu32.force.com/community01'
+      );
+</script>
+...
+</body>
+</html>
