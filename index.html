@@ -13,8 +13,13 @@
     <h1>Hello!</h1>
     ...
     <h2>My LWComponents :</h2>
+    ...
     <div id="helloWorld"></div>
+    ...
     <div id="FlowC13"></div>
+    ...
+    <div id="FlowTest"></div>
+    ...
     <script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("c:WrapperApp", function () {
@@ -46,7 +51,21 @@
             'https://edf-communities-developer-edition.eu25.force.com'
         );
     </script>
-    ...
+    <script>
+        $Lightning.use("c:WrapperApp", function () {
+            $Lightning.createComponent("c:FlowTest", {
+
+            },
+                "FlowTest",
+                function (cmp) {
+                    console.log("LWC component was created");
+                    // do some stuff
+                }
+            );
+        },
+            'https://edf-communities-developer-edition.eu25.force.com'
+        );
+    </script>
 </body>
 
 </html>
