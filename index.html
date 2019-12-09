@@ -20,6 +20,8 @@
     ...
     <div id="FlowTest"></div>
     ...
+    <div id="allContacts"></div>
+    ...
     <script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("c:WrapperApp", function () {
@@ -57,6 +59,21 @@
 
             },
                 "FlowTest",
+                function (cmp) {
+                    console.log("LWC component was created");
+                    // do some stuff
+                }
+            );
+        },
+            'https://edf-communities-developer-edition.eu25.force.com'
+        );
+    </script>
+    <script>
+        $Lightning.use("c:WrapperApp", function () {
+            $Lightning.createComponent("c:allContacts", {
+
+            },
+                "allContacts",
                 function (cmp) {
                     console.log("LWC component was created");
                     // do some stuff
