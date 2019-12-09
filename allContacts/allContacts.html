@@ -1,0 +1,17 @@
+<template>
+
+    <lightning-card title="Contact ListView" icon-name="custom:custom67">
+
+        <template if:true={listView.data}>
+            <div class="slds-m-around_medium">
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.fields.Name.value} – {contact.fields.Phone.value} </p>
+                </template>
+            </div>
+        </template>
+        <template if:true={listView.error}>
+            Error in loading the data ..
+        </template>
+    </lightning-card>
+
+</template>
