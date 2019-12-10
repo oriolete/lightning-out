@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <link type="text/css" rel="stylesheet" href="slds/styles/salesforce-lightning-design-system.css">
+    <link type="text/css" rel="stylesheet" href="_slds/styles/salesforce-lightning-design-system.css">
+</head>
+
+<body>
+    ...
+    <h1>Hello!</h1>
+    ...
+    <h2>My LWComponents :</h2>
+    ...
+    <div id="ldsDeleteRecord"></div>
+    ...
+    <script src="https://community-iliade-developer-edition.eu32.force.com/lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use("c:wrapperApp", function () {
+            $Lightning.createComponent("c:ldsDeleteRecord", {
+
+            },
+                "ldsDeleteRecord",
+                function (cmp) {
+                    console.log("LWC component was created");
+                    // do some stuff 
+                }
+            );
+        },
+            'https://community-iliade-developer-edition.eu32.force.com'
+        );
+    </script>
+    
+</body>
+
+</html>
