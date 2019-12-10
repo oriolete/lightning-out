@@ -22,6 +22,8 @@
     ...
     <div id="createContact"></div>
     ...
+    <div id="filterContactsWithProperty"></div>
+    ...
     <script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("c:WrapperApp", function () {
@@ -74,6 +76,21 @@
 
             },
                 "createContact",
+                function (cmp) {
+                    console.log("LWC component was created");
+                    // do some stuff
+                }
+            );
+        },
+            'https://edf-communities-developer-edition.eu25.force.com'
+        );
+    </script>
+    <script>
+        $Lightning.use("c:WrapperApp", function () {
+            $Lightning.createComponent("c:filterContactsWithProperty", {
+
+            },
+                "filterContactsWithProperty",
                 function (cmp) {
                     console.log("LWC component was created");
                     // do some stuff
