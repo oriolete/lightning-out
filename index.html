@@ -24,6 +24,8 @@
     ...
     <div id="filterContactsWithProperty"></div>
     ...
+    <div id="expenses"></div>
+    ...
     <script src="https://edf-communities-developer-edition.eu25.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("c:WrapperApp", function () {
@@ -32,7 +34,7 @@
             },
                 "helloWorld",
                 function (cmp) {
-                    console.log("LWC component was created");
+                    console.log("LWC helloWorld was created");
                     // do some stuff 
                 }
             );
@@ -47,7 +49,7 @@
             },
                 "FlowC13",
                 function (cmp) {
-                    console.log("LWC component was created");
+                    console.log("LWC FlowC13 was created");
                     // do some stuff
                 }
             );
@@ -62,7 +64,7 @@
             },
                 "allContacts",
                 function (cmp) {
-                    console.log("LWC component was created");
+                    console.log("LWC allContacts was created");
                     // do some stuff
                 }
             );
@@ -77,7 +79,7 @@
             },
                 "createContact",
                 function (cmp) {
-                    console.log("LWC component was created");
+                    console.log("LWC createContact was created");
                     // do some stuff
                 }
             );
@@ -92,7 +94,22 @@
             },
                 "filterContactsWithProperty",
                 function (cmp) {
-                    console.log("LWC component was created");
+                    console.log("LWC filterContactsWithProperty was created");
+                    // do some stuff
+                }
+            );
+        },
+            'https://edf-communities-developer-edition.eu25.force.com'
+        );
+    </script>
+    <script>
+        $Lightning.use("c:WrapperApp", function () {
+            $Lightning.createComponent("c:expenses", {
+
+            },
+                "expenses",
+                function (cmp) {
+                    console.log("LWC expenses was created");
                     // do some stuff
                 }
             );
