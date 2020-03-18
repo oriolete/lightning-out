@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Titre de la page</title>
+    <title>Demo Lightning Out</title>
     <link
       type="text/css"
       rel="stylesheet"
